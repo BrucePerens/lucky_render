@@ -9,8 +9,6 @@ private def fake_context
   HTTP::Server::Context.new(request, response)
 end
 
-end
-
 def render_to_string(page, context : HTTP::Server::Context = fake_context, **named_parameters)
   tr = render_to_text_response(**named_parameters, page: page, context: context)
   tr.body.to_s
