@@ -6,7 +6,7 @@
 private def fake_context
   request = HTTP::Request.new(method: "http", resource: "/")
   response = HTTP::Server::Response.new
-  HTTP::Server::Context(request, response)
+  HTTP::Server::Context.new(request, response)
 end
 
 end
