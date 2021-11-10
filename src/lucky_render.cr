@@ -3,12 +3,20 @@
 # would. You have to provide them explicitly.
 #
 # 
-def render_to_string(page, context : HTTP::Server::Context, **named_parameters)
+private def fake_context
+  request = HTTP::Request.new(method: "http", resource: "/")
+  response = HTTP::Server::Response.new
+  HTTP::Server::Context(request, response)
+end
+
+end
+
+def render_to_string(page, context : HTTP::Server::Context = fake_context, **named_parameters)
   tr = render_to_text_response(**named_parameters, page: page, context: context)
   tr.body.to_s
 end
 
-def render_to_text_response(page, context : HTTP::Server::Context, **named_parameters)
+def render_to_text_response(page, context : HTTP::Server::Context = fake_context, **named_parameters)
   p = page.new(**named_parameters, context: context)
   tr = Lucky::TextResponse.new(
     context,
