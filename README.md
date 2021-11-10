@@ -4,6 +4,23 @@ Render a page to a `String` or `Lucky::TextResponse`, for the Lucky web framewor
 I packaged these two small functions just so that other people would know how to do
 this with Lucky.
 
+## Usage
+Add this to your `shard.yml`
+```
+  dependencies:
+    ...
+    lucky_render:
+      github: BrucePerens/lucky_render
+      version: ~> 0.1.2
+```
+
+And add this to files that use the function:
+```
+require "lucky_render"
+```
+
+## API
+
 ## render_to_string: Render a Lucky page to a String.
 
 Arguments:
