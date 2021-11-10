@@ -1,0 +1,16 @@
+name: lucky_render
+version: 0.1.1
+
+description: Render a Lucky page to a `String`, or `Lucky::TextResponse`.
+
+authors:
+  - Bruce Perens <bruce@perens.com>
+
+crystal: 1.0.0
+
+license: Apache 2.0
+
+dependencies:
+  lucky:
+    github: luckyframework/lucky
+    version: ~> 0.28.0
