@@ -11,7 +11,7 @@ Add this to your `shard.yml`
     ...
     lucky_render:
       github: BrucePerens/lucky_render
-      version: ~> 0.1.5
+      version: ~> 0.1.6
 ```
 
 And add this to files that use the function:

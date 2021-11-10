@@ -1,5 +1,5 @@
 name: lucky_render
-version: 0.1.5
+version: 0.1.6
 
 description: Render a Lucky page to a `String`, or `Lucky::TextResponse`.
 
